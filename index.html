@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario con botones</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: aqua;
+            }
+            .form-container {
+                background-color: blueviolet;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0.1);
+            }
+                button{
+                    margin-top: 10px;
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    cursor: pointer;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="form-container">
+            <form> 
+                <label for="name">Nombre y Apellido</label>
+                <input type="text" id="Nombre y Apellido" name="Nombre y Apellido"><br></br>
+
+                <label for="email">Email</label>
+                <input type="text" id="Email" name="Email"><br></br>
+
+                <button type="button" onclick="submiForm()">Enviar</button>
+                <button type="reset">Eliminar</button>
+            </form>
+        </div>
+        <script>
+            function submiForm() {
+                const name = document.getElementById(`Nombre y Apellido`).value;
+                const email = document.getElementById(`email`).value;
+                alert(`Nombre y Apellido: ${Nombre y Apellido} Email: ${email}`);
+            
+            }
+        </script>
+    </body>
+</html>
